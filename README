@@ -1,1 +1,3 @@
-Simplistic Monzo API connector written in Go. 
+Simplistic Monzo API connector written in Go.
+
+You'll need to rename `config.json.example` to `config.json` and populate it with your own data from Monzo and Geckoboard Datasets
