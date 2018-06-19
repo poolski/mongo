@@ -6,7 +6,6 @@ import (
 	"os"
 	"time"
 
-	"github.com/go-redis/redis"
 	"github.com/tjvr/go-monzo"
 )
 
@@ -59,14 +58,12 @@ func main() {
 func getTransactions() {
 	c := LoadConfig("config.json")
 	gc := NewClient(c.GeckoURL, "monzo.transactions", c.GeckoAPIKey)
-	red := redis.NewClient(&redis.Options{
-		Addr: "localhost:6379",
-	})
+	// red := redis.NewClient(&redis.Options{
+	// 	Addr: "localhost:6379",
+	// })
 
-	at, err := red.Get("monzoAuthToken").Result()
-	if err != nil {
-		panic(err)
-	}
+	// at, err := red.Get("monzoAuthToken").Result()
+	at := c.AccessToken
 	cl := monzo.Client{
 		BaseURL:     "https://api.monzo.com",
 		AccessToken: at,

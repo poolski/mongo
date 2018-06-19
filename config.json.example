@@ -1,0 +1,12 @@
+{
+  "callback_url": "http://localhost:3000/callback",
+  "account_id": "monzo_account_id",
+  "gecko_apikey": "gecko_api_key",
+  "gecko_url": "https://api.geckoboard.com/",
+  "monzo_url": "https://api.monzo.com",
+  "monzo_client_id": "clientID",
+  "monzo_secret": "SUPERSECRET",
+  "listen_port": "3000",
+  "access_token": "BEEEEES",
+  "refresh_interval": 30
+}
